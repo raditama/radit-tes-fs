@@ -47,6 +47,6 @@ Daftar API sesuai soal:
 
 Tambahan API (untuk kebutuhan FE)
 1. Pagination by Status Article
-Menampilkan data berdasarkan status dan menggunakan pagination (limit & offset)
+* Menampilkan article di database berdasarkan status yang di request dan terdapat paging pada parameter limit & offset
 2. Get Count by Status Article
-Menampilkan jumlah kesuluran article berdasarkan status
+* Menampilkan jumlah article di database berdasarkan status yang di request
