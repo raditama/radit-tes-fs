@@ -2,17 +2,11 @@ TES-SV-FS
 ---------
 
 Versi Golang = go1.16.6
-
 Database = MySQL
-
 File SQL db = article.sql
-
 Database name = article
-
 Database username = root
-
 Database password =
-
 Postman collection = article.postman_collection.json
 
 Run Application
