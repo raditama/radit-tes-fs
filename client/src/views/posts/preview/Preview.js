@@ -4,6 +4,7 @@ import {
     CPagination
 } from '@coreui/react';
 import Axios from 'axios';
+import { DEV_URL } from "../Constant";
 
 const Preview = () => {
     const [listData, setListData] = useState(null)
@@ -11,12 +12,12 @@ const Preview = () => {
     const [totalPage, setTotalPage] = useState(0)
 
     useEffect(() => {
-        Axios.get(`http://localhost:8000/article/byStatus?status=publish&limit=1&offset=${page - 1}`).then(res => {
+        Axios.get(`${DEV_URL}/article/byStatus?status=publish&limit=1&offset=${page - 1}`).then(res => {
             console.log(res)
             setListData(res.data)
         })
 
-        Axios.get(`http://localhost:8000/article/getCount?status=publish`).then(res => {
+        Axios.get(`${DEV_URL}/article/getCount?status=publish`).then(res => {
             console.log(res)
             setTotalPage(res.data[0].count)
         })

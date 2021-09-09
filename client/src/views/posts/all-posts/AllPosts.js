@@ -20,6 +20,7 @@ import {
 } from '@coreui/react';
 import CIcon from '@coreui/icons-react';
 import Axios from 'axios';
+import { DEV_URL } from "../Constant";
 
 const AllPosts = () => {
     const [tab, setTab] = useState(1)
@@ -53,7 +54,7 @@ const AllPosts = () => {
         if (tab === 2) { status = 'draft' }
         if (tab === 3) { status = 'thrash' }
 
-        Axios.get(`http://localhost:8000/article/byStatus?status=${status}&limit=5&offset=${offset}`).then(res => {
+        Axios.get(`${DEV_URL}/article/byStatus?status=${status}&limit=5&offset=${offset}`).then(res => {
             console.log(res)
             setListData(res.data)
         })
@@ -64,13 +65,13 @@ const AllPosts = () => {
         var totalDraft = 0;
         var totalThrash = 0;
 
-        Axios.get(`http://localhost:8000/article/getCount?status=publish`).then(res => {
+        Axios.get(`${DEV_URL}/article/getCount?status=publish`).then(res => {
             totalPublish = res.data[0].count
         })
-        Axios.get(`http://localhost:8000/article/getCount?status=draft`).then(res => {
+        Axios.get(`${DEV_URL}/article/getCount?status=draft`).then(res => {
             totalDraft = res.data[0].count
         })
-        Axios.get(`http://localhost:8000/article/getCount?status=thrash`).then(res => {
+        Axios.get(`${DEV_URL}/article/getCount?status=thrash`).then(res => {
             totalThrash = res.data[0].count
         })
 
@@ -101,7 +102,7 @@ const AllPosts = () => {
             Category: e.category,
             Status: 'thrash'
         }
-        Axios.put(`http://localhost:8000/article/update?id=${e.id}`, data).then(res => {
+        Axios.put(`${DEV_URL}/article/update?id=${e.id}`, data).then(res => {
             console.log(res)
             if (res.data.code === 200) {
                 setVisible1(1)
@@ -122,7 +123,7 @@ const AllPosts = () => {
             Category: inputCategory,
             Status: status
         }
-        Axios.put(`http://localhost:8000/article/update?id=${dataEdit.id}`, body).then(res => {
+        Axios.put(`${DEV_URL}/article/update?id=${dataEdit.id}`, body).then(res => {
             console.log(res)
             if (res.data.code === 200) {
                 setVisible2(1)

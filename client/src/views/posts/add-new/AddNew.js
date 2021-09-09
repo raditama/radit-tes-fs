@@ -11,6 +11,7 @@ import {
 } from '@coreui/react';
 import CIcon from '@coreui/icons-react';
 import Axios from 'axios';
+import { DEV_URL } from "../Constant";
 
 const AddNew = () => {
     const [inputTitle, setInputTitle] = useState('')
@@ -41,7 +42,7 @@ const AddNew = () => {
             Category: inputCategory,
             Status: status
         }
-        Axios.post(`http://localhost:8000/article/create`, body).then(res => {
+        Axios.post(`${DEV_URL}/article/create`, body).then(res => {
             console.log(res)
             if (res.data.code === 200) {
                 setVisible1(1)
