@@ -1,36 +1,44 @@
 TES-SV-FS
 ---------
 
-Versi Golang = go1.16.6
-Database = MySQL
-File SQL db = article.sql
-Database name = article
-Database username = root
-Database password =
-Postman collection = article.postman_collection.json
+* Versi Golang = go1.16.6
+* Database = MySQL
+* File SQL db = article.sql
+* Database name = article
+* Database username = root
+* Database password =
+* Postman collection = article.postman_collection.json
 
 Run Application
 ---------------
 
 Client:
+``` bash
+# install node module
+$ npm install
 
-Install node module
-- npm install
+# install axios (jika dibutuhkan)
+$ npm install axios
 
-Running program
-- npm start
+# running program
+$ npm start
+```
 
 Service:
-
-Running program
-- go run main.go
+``` bash
+# running program
+$ go run main.go
+```
 
 HOW TO USE
 ----------
 Import db di mysql
+
 Import postman collection
+
 Running program
 
+Daftar API sesuai soal:
 1. Create Article
 2. Read Paging Article
 3. Read by Id Article
@@ -39,6 +47,11 @@ Running program
 
 Tambahan API (untuk kebutuhan FE)
 1. Pagination by Status Article
-Menampilkan data berdasarkan status dan menggunakan pagination (limit & offset)
+* Menampilkan article di database berdasarkan status yang di request dan terdapat paging pada parameter limit & offset
 2. Get Count by Status Article
-Menampilkan jumlah kesuluran article berdasarkan status
+* Menampilkan jumlah article di database berdasarkan status yang di request
+
+Tampilan Client dibuka melalui link berikut:
+* All Posts <http://localhost:3000/#/posts/all-posts>
+* Add New <http://localhost:3000/#/posts/add-new>
+* Preview <http://localhost:3000/#/posts/preview>
