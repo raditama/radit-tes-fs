@@ -13,17 +13,22 @@ Run Application
 ---------------
 
 Client:
+``` bash
+# install node module
+$ npm install
 
-Install node module
-- npm install
+# install axios (jika dibutuhkan)
+$ npm install axios
 
-Running program
-- npm start
+# running program
+$ npm start
+```
 
 Service:
-
-Running program
-- go run main.go
+``` bash
+# running program
+$ go run main.go
+```
 
 HOW TO USE
 ----------
