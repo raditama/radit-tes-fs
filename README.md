@@ -50,3 +50,8 @@ Tambahan API (untuk kebutuhan FE)
 * Menampilkan article di database berdasarkan status yang di request dan terdapat paging pada parameter limit & offset
 2. Get Count by Status Article
 * Menampilkan jumlah article di database berdasarkan status yang di request
+
+Tampilan Client didibuka melalui link berikut:
+* All Posts <http://localhost:3000/#/posts/all-posts>
+* Add New <http://localhost:3000/#/posts/add-new>
+* Preview <http://localhost:3000/#/posts/preview>
