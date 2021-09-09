@@ -2,11 +2,17 @@ TES-SV-FS
 ---------
 
 Versi Golang = go1.16.6
+
 Database = MySQL
+
 File SQL db = article.sql
+
 Database name = article
+
 Database username = root
+
 Database password =
+
 Postman collection = article.postman_collection.json
 
 Run Application
@@ -28,9 +34,12 @@ Running program
 HOW TO USE
 ----------
 Import db di mysql
+
 Import postman collection
+
 Running program
 
+Daftar API sesuai soal:
 1. Create Article
 2. Read Paging Article
 3. Read by Id Article
